@@ -108,7 +108,7 @@ void *display(void *param){  //Funcao de display usando pipe
 
         // Send data to server
         pthread_mutex_lock(&exclusao_mutua);
-        sprintf(item, "Total: %d e Peso: %f", itens, total); //String contendo as informacoes de saida, quantidade total e soma do peso a cada 1500u
+        sprintf(item, "Total: %d e Peso: %f", itens, total); //contagem de itens e peso total
         pthread_mutex_unlock(&exclusao_mutua);
         if (write(sockfd, item, strlen(item) + 1) < 0)
         {

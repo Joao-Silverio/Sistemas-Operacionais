@@ -56,8 +56,6 @@ void main()
             break;
         }
 
-        printf("Cliente conectado!\n");
-
         // Read data from client
         if (read(newsockfd, buffer, sizeof(buffer)) < 0)
         {
